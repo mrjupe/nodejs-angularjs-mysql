@@ -1,0 +1,30 @@
+<br>
+<center><h4>Form Create Student</h4></center>
+<br>
+<form ng-submit="addMahasiswa()">
+  <div class="form-group">
+    <label>NPM</label>
+    <input ng-model="mahasiswa.npm" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex: 15753001" required>
+  </div>
+  <div class="form-group">
+    <label>Name</label>
+    <input ng-model="mahasiswa.nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex: John Doe" required>
+  </div>
+  <div class="form-group">
+    <label>Address</label>
+    <textarea ng-model="mahasiswa.alamat" class="form-control" rows="5" id="comment" placeholder="45 Mount Eden Road, Mount Eden, Auckland" required></textarea>
+  </div>
+  <div class="form-group">
+    <label>Semester</label>
+    <select ng-model="mahasiswa.semester" class="form-control">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+  </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <a class="btn btn-info" href="#">Cancel</a>
+</form>

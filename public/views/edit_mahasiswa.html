@@ -1,0 +1,44 @@
+<br>
+<center><h4>Form Edit Mahasiswa</h4></center>
+<br>
+
+<form ng-submit="editMahasiswa()" ng-init="getMahasiswaById()">
+  <div class="form-group">
+    <label>NPM</label>
+    <input ng-model="mahasiswa.data[0].npm" type="text" class="form-control" placeholder="Ex: 15753001" readonly>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <label>Name</label>
+      <input ng-model="mahasiswa.nama" type="text" class="form-control" placeholder="Ex: John Doe" required>
+    </div>
+    <div class="col">
+      <label>Old Name</label>
+      <input ng-model="mahasiswa.data[0].nama" type="text" class="form-control" placeholder="Ex: John Doe" readonly>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col">
+      <label>Address</label>
+      <textarea ng-model="mahasiswa.alamat" class="form-control" rows="5" placeholder="45 Mount Eden Road, Mount Eden, Auckland" required></textarea>
+    </div>
+    <div class="col">
+      <label>Old Address</label>
+      <textarea ng-model="mahasiswa.data[0].alamat" class="form-control" rows="5" placeholder="45 Mount Eden Road, Mount Eden, Auckland" readonly></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Semester</label>
+    <select ng-model="mahasiswa.semester" class="form-control" required>
+      <option value=""></option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <a class="btn btn-info" href="#">Cancel</a>
+</form>

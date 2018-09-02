@@ -1,0 +1,31 @@
+<div class="panel panel-primary" ng-init="getMahasiswa()">
+  <div class="panel-heading">
+    <h4 class="panel-title"><center>List of College Student</center></h4>
+      <br><a class="btn btn-success btn-sm" style="float: right" href="#!/api/mahasiswa/add">Add New</a>
+      <br><br>
+  </div>
+  <div class="panel-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>NPM</th>
+          <th width="150px">Name</th>
+          <th>Address</th>
+          <th>Semester</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="mhs in mahasiswaa.data">
+          <td>{{mhs.npm}}</td>
+          <td>{{mhs.nama}}</td>
+          <td>{{mhs.alamat}}</td>
+          <td>{{mhs.semester}}</td>
+          <td><a class="btn btn-info btn-sm" href="#!/api/mahasiswa/detail/{{mhs.npm}}">Detail</a>
+          <br><br><a class="btn btn-primary btn-sm" href="#!/api/mahasiswa/edit/{{mhs.npm}}">Edit</a>
+        </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

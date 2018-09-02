@@ -1,0 +1,17 @@
+<center>
+<div class="card" style="width: 18rem;" ng-init="getMahasiswaById()">
+  <div class="card-body">
+    <h5 class="card-title">{{mahasiswa.data[0].nama}}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">NPM : {{mahasiswa.data[0].npm}}</li>
+    <li class="list-group-item">Semester : {{mahasiswa.data[0].semester}}</li>
+    <li class="list-group-item">Alamat : <br> {{mahasiswa.data[0].alamat}}</li>
+  </ul>
+
+  <div class="card-body">
+    <a class="btn btn-danger btn-sm" style="float: left" href="#!" ng-click="removeMahasiswa(mahasiswa.data[0].npm)">Delete</a>
+    <a href="#" style="float: right" class="btn btn-primary btn-sm">Back</a>
+  </div>
+</div>
+<center>
