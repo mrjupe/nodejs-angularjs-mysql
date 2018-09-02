@@ -1,0 +1,11 @@
+{
+  "name": "restapi-nodejs-angularjs-mysql",
+  "version": "1.0.0",
+  "description": "Simple RESTApi Node-Js and Angular-js with Mysql",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "M Jupri Amin",
+  "license": "ISC"
+}
