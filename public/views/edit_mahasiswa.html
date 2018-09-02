@@ -1,5 +1,5 @@
 <br>
-<center><h4>Form Edit Mahasiswa</h4></center>
+<center><h4>Form Edit</h4></center>
 <br>
 
 <form ng-submit="editMahasiswa()" ng-init="getMahasiswaById()">
@@ -27,18 +27,25 @@
       <textarea ng-model="mahasiswa.data[0].alamat" class="form-control" rows="5" placeholder="45 Mount Eden Road, Mount Eden, Auckland" readonly></textarea>
     </div>
   </div>
-  <div class="form-group">
-    <label>Semester</label>
-    <select ng-model="mahasiswa.semester" class="form-control" required>
-      <option value=""></option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-    </select>
+  <div class="form-row">
+    <div class="col">
+      <label>Semester</label>
+      <select ng-model="mahasiswa.semester" class="form-control" required>
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+    <div class="col">
+      <label>Old Semester</label>
+      <input ng-model="mahasiswa.data[0].semester" type="text" class="form-control" readonly>
+    </div>
   </div>
+  <br>
   <button type="submit" class="btn btn-primary">Submit</button>
   <a class="btn btn-info" href="#">Cancel</a>
 </form>
